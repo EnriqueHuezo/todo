@@ -48,7 +48,7 @@ fun NewTodo(
 ) {
     val data = todoViewModel.data
     val showDateDialog = remember { mutableStateOf(false) }
-    val snackBarHostState = SnackbarHostState()
+    //val snackBarHostState = SnackbarHostState()
 
     if (showDateDialog.value) {
         val datePickerState = rememberDatePickerState()
@@ -115,7 +115,7 @@ fun NewTodo(
                 }
             },
             snackbarHost = {
-                SnackbarHost(hostState = snackBarHostState)
+                SnackbarHost(hostState = todoViewModel.snackBarHostState)
             }
         ) { paddingValues ->
             Column(

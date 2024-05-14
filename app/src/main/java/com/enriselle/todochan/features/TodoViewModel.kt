@@ -133,7 +133,7 @@ class TodoViewModel: ViewModel() {
         )
 
         if (verifyIfExistTheSameTodo(newTodo)) {
-            showSnackBar("Ya existe un todo con el mismo titulo")
+            showSnackBar("Ya existe un todo con el mismo título")
             return
         }
 
