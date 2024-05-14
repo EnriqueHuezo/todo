@@ -61,7 +61,7 @@ fun Main(
             topBar = {
                 TopAppBar(
                     title = {
-                        Text(text = "Bienvenido de nuevo!")
+                        Text(text = "¿Qué vamos a hacer hoy?")
                     }
                 )
             },
@@ -143,7 +143,7 @@ fun Main(
                             Text(
                                 modifier = Modifier
                                     .fillMaxWidth(),
-                                text = "No hay nada por mostrar",
+                                text = "¡Agrega una nueva tarea!",
                                 textAlign = TextAlign.Center
                             )
                         }

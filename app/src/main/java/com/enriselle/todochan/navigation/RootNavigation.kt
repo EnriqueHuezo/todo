@@ -54,7 +54,16 @@ fun RootNavigation(
             composable(MainRoute.CreateTodoScreen.route) {
                 NewTodo(
                     onAddClick = {
-                        navController.navigate(MainRoute.MainScreen.route)
+                        navController.navigate(MainRoute.MainScreen.route) {
+                            popUpTo(MainRoute.MainScreen.route)
+                        }
+                    },
+                    onBackClick = {
+                        navController.navigate(MainRoute.MainScreen.route) {
+                            popUpTo(MainRoute.MainScreen.route) {
+                                inclusive = true
+                            }
+                        }
                     },
                     todoViewModel = todoViewModel
                 )

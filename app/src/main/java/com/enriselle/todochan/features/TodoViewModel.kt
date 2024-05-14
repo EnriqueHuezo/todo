@@ -1,6 +1,7 @@
 package com.enriselle.todochan.features
 
 import android.os.Parcelable
+import androidx.compose.material3.SnackbarDuration
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -95,7 +96,8 @@ class TodoViewModel: ViewModel() {
     private fun showSnackBar(message: String) {
         viewModelScope.launch {
             snackBarHostState.showSnackbar(
-                message
+                message,
+                duration = SnackbarDuration.Short
             )
         }
     }
@@ -144,6 +146,6 @@ class TodoViewModel: ViewModel() {
         data = data.copy(description = "")
         data = data.copy(dueDate = "")
         flag.value = true
-        showSnackBar("Agregado correctamente!")
+        showSnackBar("¡Agregado correctamente!")
     }
 }
